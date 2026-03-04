@@ -1,0 +1,83 @@
+Kafka:
+This was a live training session on Kafka, a distributed event streaming platform, conducted as part of a Multi-Cloud with AWS + DevOps + AI Bootcamp (Batch-42).
+
+Key Topics Covered:
+
+Introduction to Kafka:
+Kafka is a distributed event streaming platform used for real-time data processing
+Core components include: Producer (sends messages), Consumer (receives messages), Broker (manages data), and Topics (message categories)
+Used for centralized messaging systems to avoid point-to-point communication issues
+Why Kafka:
+Provides centralized communication hub
+Prevents message loss if one system fails
+Used by companies like Netflix, Facebook, Instagram for data streaming
+Better than older technologies like RabbitMQ
+Handles high-volume messaging (1 lakh+ messages per hour)
+Practical Implementation:
+Kafka was installed on Kubernetes cluster (not virtual machines) for high availability
+Used Strimzi operator for managed Kafka deployment on Kubernetes
+Created GKE cluster with E2-standard-2 machine type
+Installed Kafka operator and components
+Created Kafka namespace and topics
+Demonstrated producer-consumer model where messages sent by producer were received by consumer in real-time
+Important Points:
+Kafka runs on port 9092 (bootstrap server)
+Not mandatory for all companies - only needed for high-volume environments
+Similar to AWS SNS and GCP Pub/Sub but open source
+DevOps engineers need to know setup, but data engineers handle actual configuration
+The session included hands-on demonstration with live message streaming between producer and consumer.
+======================================================================================
+Based on the meeting transcript, here are the key Q&A points from today's Kafka session:
+
+Main Questions and Answers:
+
+What is Kafka?
+
+Kafka is a live streaming data processing platform
+It's an event-driven architecture with asynchronous communication
+Open source platform for pub-sub behavior
+Works with producer-consumer model
+Why use Kafka on Kubernetes instead of virtual machines?
+
+Need high availability
+Need automation and self-healing
+If centralized system goes down on VM, everything breaks
+Kubernetes provides scalability and containerized infrastructure
+What is an Operator?
+
+Kafka has many components that are difficult to manage manually
+Operator is a managed service approach to handle Kafka components automatically
+Core Components of Kafka:
+
+Producer: Creates/sends messages
+Consumer: Receives/subscribes to messages
+Broker: Manages partitions and processes data
+Topic: The message category (like a subject)
+Partition: Breaks data into smaller parts for processing
+Is Kafka mandatory to use?
+
+Not mandatory. Only use if you have budget and team talent
+Similar managed services exist: AWS SNS, GCP Pub/Sub (but they cost money)
+Kafka is open source and free
+How does Kafka handle multiple producers?
+
+Multiple producers can send data from different sources
+Kafka segregates based on topics
+This is typically configured by Kafka/data engineers
+Bootstrap server (port 9092):
+
+Bootstrap means installing/initializing the server
+It's the streaming server for internal communication
+Runs on port 9092
+Use cases:
+
+Real-time data streaming (Netflix, Facebook, Instagram)
+Log aggregations from multiple machines
+Messaging queues (like salary processing for large companies)
+Web activity tracking
+Event-driven systems
+Is this role for DevOps?
+
+This is primarily for data engineers/Kafka engineers
+For DevOps
+================================================================
