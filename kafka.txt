@@ -81,3 +81,37 @@ Is this role for DevOps?
 This is primarily for data engineers/Kafka engineers
 For DevOps
 ================================================================
+Q&A from Today's Kafka Session
+Q1: What is Kafka?
+A: Kafka is a distributed event streaming platform used for processing real-time data. It handles live streaming data and uses a publish-subscribe messaging system with topics. It has an event-driven architecture and works with asynchronous communications.
+
+Q2: What are the core components of Kafka?
+A: The main components are:
+
+Producer (sends/creates messages)
+Consumer (receives/subscribes to messages)
+Broker (manages and distributes messages)
+Topics (categories for organizing messages)
+Partitions (divides data into smaller parts for processing)
+Q3: Why use Kafka on Kubernetes instead of virtual machines?
+A: Using Kafka on Kubernetes provides high availability, auto-scaling, self-healing capabilities, and containerized infrastructure. If a centralized system on a VM goes down, all connections break. Kubernetes ensures the system stays up and running with multiple replicas.
+
+Q4: What is the role of a producer and consumer in Kafka?
+A: Producer creates/produces the messages and sends them to Kafka. Consumer receives/consumes those messages from Kafka. Multiple producers can send data, and multiple consumers can receive it through the centralized Kafka system.
+
+Q5: What is a Kafka operator?
+A: An operator is a managed service that helps manage Kafka's multiple components automatically. It makes Kafka production-ready on Kubernetes and simplifies the complex setup and management tasks.
+
+Q6: What are real-world use cases of Kafka?
+A:
+
+Data streaming (Netflix, Facebook, Instagram)
+Log aggregation from multiple machines
+Messaging queues (like salary processing for large companies)
+Web activity tracking
+Order processing systems (Swiggy, Flipkart)
+Q7: What is bootstrap in Kafka context?
+A: Bootstrap refers to installing and starting the Kafka server. The bootstrap server runs on port 9092 and handles internal communication for the streaming server.
+
+Q8: When should you use Kafka?
+A: Use Kafka when you need to process more than 1 lakh (100,000) messages
